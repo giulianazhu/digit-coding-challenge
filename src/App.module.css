@@ -1,0 +1,134 @@
+/* rushed styling, could have done better responsiveness etc. if given more time I think :D */
+
+.page {
+  min-height: 100svh;
+  max-height: 100%;
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  background-color: white;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.search {
+  flex: 0 1 auto;
+  border-radius: 15px;
+  padding: 0.2em 0.8em;
+}
+
+.searchButton {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+.content {
+  display: flex;
+  background-color: rgb(220, 220, 220);
+}
+
+.sidebar {
+  padding: 0.2em;
+  flex: 0 1 200px;
+  background-color: rgb(184, 184, 184);
+  border-right: 1px solid white;
+}
+
+.sideList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.sideButtons {
+  padding: 1em;
+  text-align: center;
+  background-color: white;
+}
+
+.displayer {
+  padding: 1em;
+  flex: 2 0.1 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  background-color: rgb(66, 66, 66);
+}
+
+.display {
+  flex: 1 1 50vh;
+  padding: 1em;
+}
+
+.title {
+  flex: 0 0 max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.title a {
+  text-decoration: underline;
+}
+
+.mainImg {
+  margin: 1em;
+  width: 500px;
+  max-width: 100%;
+  height: 300px;
+  object-fit: contain;
+  @media (max-width: 40rem) {
+    width: 300px;
+  }
+  @media (max-width: 26rem) {
+    width: 150px;
+  }
+}
+
+.thumbnailList {
+  padding: 1em;
+  flex: 0 0 100px;
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  overflow-x: auto;
+  border-top: 1px solid white;
+}
+
+.thumbnail {
+  padding: 0.2em;
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+
+.activeSideButton {
+  color: white;
+  background-color: rgb(75, 75, 75);
+}
+
+.activeThumbnail {
+  border: black 2px solid;
+}
