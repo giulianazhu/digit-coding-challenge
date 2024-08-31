@@ -38,7 +38,9 @@ export default function App() {
         <Searchform onSubmit={handleSearch} />
       </nav>
       <main className={styles.main}>
-        <Sidebar currImg={currImg} setCurrImg={setCurrImg} images={images} />
+        <section className={styles.sidebar}>
+          <Sidebar currImg={currImg} setCurrImg={setCurrImg} images={images} />
+        </section>
         <section className={styles.displayer}>
           <Display currImg={currImg} />
           <Thumbnails

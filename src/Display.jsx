@@ -4,8 +4,10 @@ export default function Display({ currImg }) {
   return (
     <div className={styles.display}>
       <div className={styles.title}>
-        {currImg?.photographer}
-        <a href={currImg?.photographer_url}> details</a>
+        <span>Photographer: </span>
+        <span>
+          <a href={currImg?.photographer_url}>{currImg?.photographer}</a>
+        </span>
       </div>
       <img
         src={currImg?.src?.original}

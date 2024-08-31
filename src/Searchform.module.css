@@ -20,8 +20,9 @@
   padding: 0.2em 0.8em;
   border: none;
   border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: inset -2px 1px 4px 1px rgb(0, 0, 0, 0.2);
+  background-color: rgb(52, 52, 52);
+  box-shadow: inset -2px 1px 4px 1px rgba(0, 0, 0, 0.2);
+  color: rgb(166, 166, 166);
 }
 
 .searchButton {
@@ -31,6 +32,6 @@
   width: 30px;
   height: 30px;
   border: none;
-  background-color: rgb(217, 217, 217);
+  background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4);
 }
