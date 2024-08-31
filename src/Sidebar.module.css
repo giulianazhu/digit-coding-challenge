@@ -1,0 +1,23 @@
+.sidebar {
+  padding: 0.2em;
+  flex: 0 1 200px;
+  background-color: rgb(184, 184, 184);
+  border-right: 1px solid white;
+}
+
+.sideList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.sideButtons {
+  padding: 1em;
+  text-align: center;
+  background-color: white;
+}
+
+.activeSideButton {
+  color: white;
+  background-color: rgb(75, 75, 75);
+}

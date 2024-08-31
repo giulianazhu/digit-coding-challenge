@@ -2,9 +2,12 @@ import styles from "./App.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { getImagesByTopic } from "./apiServices";
+import Sidebar from "./Sidebar";
+import Searchform from "./Searchform";
+import Thumbnails from "./Thumbnails";
+import Display from "./Display";
 
 export default function App() {
-  const [input, setInput] = useState("nature");
   const [currImg, setCurrImg] = useState(null);
   const [images, setImages] = useState([]);
 
@@ -28,74 +31,22 @@ export default function App() {
       setCurrImg(data[0]);
     }
   }
-  console.log(currImg);
 
   return (
     <main className={styles.page}>
       <section className={styles.nav}>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSearch(input);
-            console.log("submit");
-          }}
-          className={styles.form}
-        >
-          <label htmlFor="search">Search</label>
-          <input
-            type="search"
-            id="search"
-            className={styles.search}
-            placeholder={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button className={styles.searchButton}>
-            <img src="icons8-search.svg" alt="" />
-          </button>
-        </form>
+        <Searchform onSubmit={handleSearch} />
       </section>
       <section className={styles.content}>
-        <div className={styles.sidebar}>
-          <ul className={styles.sideList}>
-            {images?.map((img, i) => (
-              <li
-                className={`${styles.sideButtons} ${
-                  currImg.id === img?.id && styles.activeSideButton
-                }`}
-                key={img?.id}
-                onClick={() => setCurrImg(img)}
-              >
-                Image {i + 1}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Sidebar currImg={currImg} setCurrImg={setCurrImg} images={images} />
         <div className={styles.displayer}>
-          <div className={styles.display}>
-            <div className={styles.title}>
-              {currImg?.photographer}
-              <a href={currImg?.photographer_url}> details</a>
-            </div>
-            <img
-              src={currImg?.src?.original}
-              alt={currImg?.alt}
-              className={styles.mainImg}
-            />
-          </div>
+          <Display currImg={currImg} />
           <div className={styles.listWrap}>
-            <ul className={styles.thumbnailList}>
-              {images?.map((img) => (
-                <li key={img?.id} onClick={() => setCurrImg(img)}>
-                  <img
-                    src={img?.src?.small}
-                    alt={img?.alt}
-                    className={`${styles.thumbnail} ${
-                      currImg.id === img?.id && styles.activeThumbnail
-                    }`}
-                  />
-                </li>
-              ))}
-            </ul>
+            <Thumbnails
+              images={images}
+              setCurrImg={setCurrImg}
+              currImg={currImg}
+            />
           </div>
         </div>
       </section>

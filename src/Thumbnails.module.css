@@ -1,0 +1,22 @@
+.thumbnailList {
+  padding: 1em;
+  flex: 0 0 100px;
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  border-top: 1px solid white;
+}
+
+.thumbnail {
+  padding: 0.2em;
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+
+.activeThumbnail {
+  border: black 2px solid;
+}
