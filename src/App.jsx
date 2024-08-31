@@ -33,23 +33,21 @@ export default function App() {
   }
 
   return (
-    <main className={styles.page}>
-      <section className={styles.nav}>
+    <div className={styles.app}>
+      <nav className={styles.nav}>
         <Searchform onSubmit={handleSearch} />
-      </section>
-      <section className={styles.content}>
+      </nav>
+      <main className={styles.main}>
         <Sidebar currImg={currImg} setCurrImg={setCurrImg} images={images} />
-        <div className={styles.displayer}>
+        <section className={styles.displayer}>
           <Display currImg={currImg} />
-          <div className={styles.listWrap}>
-            <Thumbnails
-              images={images}
-              setCurrImg={setCurrImg}
-              currImg={currImg}
-            />
-          </div>
-        </div>
-      </section>
-    </main>
+          <Thumbnails
+            images={images}
+            setCurrImg={setCurrImg}
+            currImg={currImg}
+          />
+        </section>
+      </main>
+    </div>
   );
 }

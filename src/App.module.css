@@ -1,6 +1,6 @@
 /* rushed styling, could have done better responsiveness etc. if given more time I think :D */
 
-.page {
+.app {
   min-height: 100svh;
   max-height: 100%;
   display: grid;
@@ -9,16 +9,14 @@
 }
 
 .nav {
-  position: sticky;
-  top: 0;
-  padding: 1em;
+  padding-inline: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
 }
 
-.content {
+.main {
   display: flex;
   background-color: rgb(220, 220, 220);
 }

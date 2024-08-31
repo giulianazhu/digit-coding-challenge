@@ -2,7 +2,7 @@ import styles from "./Sidebar.module.css";
 
 export default function Sidebar({ images, currImg, setCurrImg }) {
   return (
-    <div className={styles.sidebar}>
+    <section className={styles.sidebar}>
       <ul className={styles.sideList}>
         {images?.map((img, i) => (
           <li
@@ -16,6 +16,6 @@ export default function Sidebar({ images, currImg, setCurrImg }) {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

@@ -1,4 +1,5 @@
 .form {
+  flex: 0 1 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,15 +7,30 @@
 }
 
 .search {
-  flex: 0 1 auto;
+  flex: 1 1 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
   border-radius: 15px;
+}
+
+.searchInput {
+  width: 100%;
   padding: 0.2em 0.8em;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset -2px 1px 4px 1px rgb(0, 0, 0, 0.2);
 }
 
 .searchButton {
+  position: absolute;
+  right: 0;
+  padding: 0.2em;
   width: 30px;
   height: 30px;
   border: none;
-  border-radius: 15px;
-  background-color: transparent;
+  background-color: rgb(217, 217, 217);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.4);
 }
