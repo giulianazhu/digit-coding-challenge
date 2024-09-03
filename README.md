@@ -12,4 +12,4 @@
 
 ### Phone view
 
-![image displayer phone view screenshot](./screenshots/digit_gallery_phone_ss.png)
+<img alt="image displayer phone view screenshot" width="360" src="./screenshots/digit_gallery_phone_ss.png"/>
