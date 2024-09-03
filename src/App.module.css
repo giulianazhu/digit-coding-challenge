@@ -1,15 +1,16 @@
-/* rushed styling, could have done better responsiveness etc. if given more time I think :D */
-
 .app {
   min-height: 100svh;
   max-height: 100dvh;
-  display: grid;
-  grid-template-rows: 5rem 1fr;
+  /* display: grid;
+  grid-template-rows: 5rem 1fr; */
+  display: flex; /*new*/
+  flex-direction: column; /*new*/
   color: white;
 }
 
 .nav {
   padding-inline: 1em;
+  flex: 0 0 5rem; /*new*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,9 @@
 }
 
 .main {
+  flex: 1 0 100%; /*new*/
   display: flex;
+  /* height: 100%; */
 }
 
 .sidebar {
@@ -32,11 +35,12 @@
 
 .displayer {
   padding: 1em;
+  /* height: 100%; */
   flex: 1 1 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   gap: 1em;
   background-color: rgb(24, 24, 24);
   @media (max-width: 26rem) {

@@ -10,7 +10,7 @@ export default function Display({ currImg }) {
         </span>
       </div>
       <img
-        src={currImg?.src?.original}
+        src={currImg?.src.original}
         alt={currImg?.alt}
         className={styles.mainImg}
       />

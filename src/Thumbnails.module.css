@@ -1,7 +1,7 @@
 .thumbnailList {
   padding: 1em;
   flex: 0 0 100px;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   gap: 1em;
   overflow-x: auto;
